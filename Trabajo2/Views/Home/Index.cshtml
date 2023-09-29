@@ -1,0 +1,26 @@
+﻿@model Trabajo2.Models.Conversion
+
+<html lang="es">
+<head>
+
+    <title>Convertidor de Dolar a Peso Mexicano o Peso Mexicano a Dolar</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <form action="~/Home/Index" method="post">
+        <h1>Convertidor de Dolar a Peso Mexicano o Peso Mexicano a Dolar</h1>
+        <h1> Actualmente el Dolar esta $18MXN</h1>
+        <label for="TipoConversion">Tipo de Conversión:</label>
+        <select id="TipoConversion" name="TipoConversion">
+            <option value="DolaraPeso">Dólar a Peso Mexicano</option>
+            <option value="PesoaDolar">Peso Mexicano a Dólar</option>
+        </select>
+
+        <label>Cantidad en Dolares:</label>
+        <input type="number" name="PesoAm" value="@Model.PesoAm">
+        <input type="submit" value="Convertir" />
+        <p>Cantidad : $ <span id="Resultado">@Model.Resultado.ToString("0.00")</span> </p>
+    </form>
+</body>
+</html>
+
